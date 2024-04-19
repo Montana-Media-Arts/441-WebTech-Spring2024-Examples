@@ -1,33 +1,12 @@
-<html>
-   <head>
-      <title>Node.js</title>
-      <style>
-         body{
-            background-color: burlywood;
-         }
-      </style>
-      <script>
-         function refreshPage()
-         {
-            const params = new URLSearchParams(window.location.search)
-            var fName = params.get("firstName");
-            var lName = params.get("lastName");
-            var refresh = params.has("norefresh");
-            if(!refresh)
-            {
-               window.location = "index2.html?firstName=" + fName + "&lastName=" + lName + "&norefresh=1";
-            }
-            
-         }
-      </script>
-   </head>
-   
-   <body onload="refreshPage();">
-     <h1>
-       Welcome!
-     </h1>
-     <span>Grant Williams</span>
-     
-     
-   </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.babylonjs.com/viewer/babylon.viewer.js"></script>
+</head>
+<body>
+     <babylon model="http://localhost:52331/Robot.glb"></babylon>
+</body>
 </html>
